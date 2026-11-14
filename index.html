@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Luck ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="hearts" id="hearts"></div>
+
+    <!-- WELCOME PAGE -->
+    <section id="welcomePage" class="page active">
+        <div class="welcome-card">
+            <div class="top-heart">💗</div>
+
+            <p class="small-heading">A LITTLE GAME FOR TWO HEARTS</p>
+
+            <h1>Our Luck</h1>
+
+            <h2>50 Decisions Together ✨</h2>
+
+            <p class="welcome-text">
+                Where should we go?<br>
+                What should we eat?<br>
+                What should we do together?
+            </p>
+
+            <div class="welcome-emoji">🎁 💕 🎀</div>
+
+            <p class="destiny-text">
+                No planning, no arguing.<br>
+                Let's leave everything to our luck!
+            </p>
+
+            <button class="main-btn" id="startBtn">
+                Start Our Journey ❤️
+            </button>
+
+            <p class="footer-note">Made with love, just for us.</p>
+        </div>
+    </section>
+
+
+    <!-- GAME PAGE -->
+    <section id="gamePage" class="page">
+
+        <div class="game-container">
+
+            <div class="game-header">
+                <p class="small-heading">OUR LITTLE ADVENTURE</p>
+                <h1>Choose Your Luck 💗</h1>
+                <p>Let's see what destiny has planned!</p>
+            </div>
+
+            <div class="progress-area">
+                <div class="progress-info">
+                    <span id="roundText">QUESTION 01 / 50</span>
+                    <span id="progressPercent">2%</span>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-icon">💭</div>
+
+                <p class="question-label">OUR QUESTION</p>
+
+                <h2 id="questionText">
+                    Where should we go?
+                </h2>
+
+                <p id="questionHint">
+                    Choose one mystery box!
+                </p>
+            </div>
+
+            <div class="box-area" id="boxArea">
+
+                <button class="mystery-box" data-index="0">
+                    <span class="box-emoji">🎁</span>
+                    <span class="box-name">BOX 01</span>
+                    <span class="box-subtitle">Open Me</span>
+                </button>
+
+                <button class="mystery-box" data-index="1">
+                    <span class="box-emoji">🎁</span>
+                    <span class="box-name">BOX 02</span>
+                    <span class="box-subtitle">Open Me</span>
+                </button>
+
+                <button class="mystery-box" data-index="2">
+                    <span class="box-emoji">🎁</span>
+                    <span class="box-name">BOX 03</span>
+                    <span class="box-subtitle">Open Me</span>
+                </button>
+
+            </div>
+
+            <p class="choose-note" id="chooseNote">
+                🎀 Pick only ONE box. Trust your luck!
+            </p>
+
+
+            <!-- RESULT -->
+            <div class="result-card hidden" id="resultCard">
+
+                <div class="result-sparkle">✨</div>
+
+                <p class="result-label">DESTINY HAS DECIDED!</p>
+
+                <div class="result-emoji" id="resultEmoji">🏖️</div>
+
+                <h2 id="resultTitle">Cox's Bazar!</h2>
+
+                <p id="resultDescription">
+                    Looks like our next adventure is waiting!
+                </p>
+
+                <button class="main-btn next-btn" id="nextBtn">
+                    OK, Next Question 💗
+                </button>
+
+                <p class="result-footer">
+                    One more little decision together.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FINAL PAGE -->
+    <section id="finalPage" class="page">
+
+        <div class="final-card">
+
+            <div class="final-heart">💖</div>
+
+            <p class="small-heading">OUR 50 DECISIONS ARE COMPLETE</p>
+
+            <h1>That's Our Journey!</h1>
+
+            <div class="final-decoration">🌷 💕 🌷</div>
+
+            <p class="final-message">
+                50 little decisions,<br>
+                countless beautiful possibilities.
+                <br><br>
+                It doesn't matter where we go,<br>
+                what we eat or what we do.
+                <br><br>
+                As long as I have you beside me,<br>
+                every place becomes special.
+            </p>
+
+            <h2>Love You, Jan! ❤️</h2>
+
+            <p class="final-footer">
+                Our luck brought us here,<br>
+                but my heart always chooses you.
+            </p>
+
+            <button class="main-btn" id="restartBtn">
+                Play Again 💗
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffe4ef, #fff0f5, #fce7f3);
+    color: #71334f;
+    overflow-x: hidden;
+}
+
+/* PAGES */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 25px 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.page.active {
+    display: flex;
+}
+
+/* WELCOME */
+
+.welcome-card,
+.final-card {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(255,255,255,0.85);
+    padding: 45px 25px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(204, 90, 140, 0.15);
+    border: 2px solid white;
+    animation: appear 0.8s ease;
+}
+
+.top-heart {
+    font-size: 65px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.small-heading {
+    color: #d46b9b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 18px 0;
+}
+
+.welcome-card h1,
+.final-card h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(55px, 12vw, 75px);
+    color: #d94f91;
+    margin: 10px 0;
+}
+
+.welcome-card h2 {
+    font-size: 18px;
+    color: #9e5277;
+}
+
+.welcome-text {
+    margin-top: 25px;
+    line-height: 2;
+    font-size: 15px;
+    color: #85536b;
+}
+
+.welcome-emoji {
+    font-size: 35px;
+    margin: 25px 0;
+}
+
+.destiny-text {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+
+.main-btn {
+    background: linear-gradient(135deg, #f47eae, #d94f91);
+    color: white;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 40px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 7px 18px rgba(217, 79, 145, 0.25);
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(217, 79, 145, 0.35);
+}
+
+.footer-note {
+    font-size: 11px;
+    margin-top: 25px;
+    color: #bb7999;
+}
+
+/* GAME */
+
+.game-container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    padding: 15px 0;
+    animation: appear 0.5s ease;
+}
+
+.game-header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+    color: #d94f91;
+}
+
+.game-header p:last-child {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #95657d;
+}
+
+/* PROGRESS */
+
+.progress-area {
+    margin: 30px 0;
+    text-align: left;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+    color: #b84d80;
+    margin-bottom: 9px;
+}
+
+.progress-track {
+    height: 10px;
+    background: #f5c9dd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 2%;
+    background: linear-gradient(90deg, #f47eae, #d94f91);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+/* QUESTION */
+
+.question-card {
+    background: rgba(255,255,255,0.85);
+    border-radius: 25px;
+    padding: 25px 15px;
+    box-shadow: 0 8px 25px rgba(204, 90, 140, 0.1);
+    border: 1px solid white;
+}
+
+.question-icon {
+    font-size: 35px;
+}
+
+.question-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #d46b9b;
+    margin: 12px 0;
+}
+
+.question-card h2 {
+    font-size: clamp(20px, 5vw, 28px);
+    color: #a84478;
+}
+
+.question-card > p:last-child {
+    font-size: 12px;
+    margin-top: 12px;
+    color: #b77b98;
+}
+
+/* MYSTERY BOXES */
+
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 30px 0 20px;
+}
+
+.mystery-box {
+    background: linear-gradient(145deg, #fff, #ffe2ef);
+    border: 2px solid white;
+    border-radius: 20px;
+    min-height: 150px;
+    padding: 15px 5px;
+    box-shadow: 0 8px 20px rgba(196, 80, 132, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.mystery-box:hover:not(:disabled) {
+    transform: translateY(-8px);
+    border-color: #f58bb7;
+    box-shadow: 0 12px 25px rgba(196, 80, 132, 0.2);
+}
+
+.box-emoji {
+    font-size: 42px;
+    transition: 0.4s;
+}
+
+.box-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #c24d85;
+}
+
+.box-subtitle {
+    font-size: 10px;
+    color: #bd83a0;
+}
+
+.mystery-box:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.mystery-box.opened {
+    background: #fbd1e4;
+    border: 2px solid #e96ca3;
+    opacity: 1;
+    transform: scale(1.04);
+}
+
+.mystery-box.opened .box-emoji {
+    transform: rotate(15deg) scale(1.15);
+}
+
+.mystery-box.opened .box-subtitle {
+    color: #a72e69;
+    font-weight: 700;
+}
+
+.choose-note {
+    color: #b77b98;
+    font-size: 13px;
+}
+
+/* RESULT */
+
+.result-card {
+    background: white;
+    padding: 28px 18px;
+    border-radius: 25px;
+    margin-top: 25px;
+    border: 2px solid #ffd4e6;
+    box-shadow: 0 10px 30px rgba(204, 90, 140, 0.15);
+    animation: appear 0.6s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.result-sparkle {
+    font-size: 30px;
+}
+
+.result-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #d46b9b;
+    margin: 12px 0;
+}
+
+.result-emoji {
+    font-size: 65px;
+    margin: 15px 0;
+    animation: heartbeat 1.5s infinite;
+}
+
+.result-card h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: #d94f91;
+}
+
+.result-card > p:nth-of-type(2) {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 15px 0 22px;
+}
+
+.next-btn {
+    width: 100%;
+    max-width: 280px;
+}
+
+.result-footer {
+    color: #bb7999;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+/* FINAL */
+
+.final-heart {
+    font-size: 65px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-decoration {
+    font-size: 30px;
+    margin: 25px 0;
+}
+
+.final-message {
+    font-size: 15px;
+    line-height: 2;
+    color: #87546e;
+}
+
+.final-card h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 38px;
+    color: #d94f91;
+    margin: 25px 0 15px;
+}
+
+.final-footer {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* FLOATING HEARTS */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -40px;
+    font-size: 20px;
+    opacity: 0.5;
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .welcome-card,
+    .final-card {
+        padding: 35px 18px;
+    }
+
+    .game-header h1 {
+        font-size: 40px;
+    }
+
+    .box-area {
+        gap: 8px;
+    }
+
+    .mystery-box {
+        min-height: 125px;
+        border-radius: 16px;
+    }
+
+    .box-emoji {
+        font-size: 34px;
+    }
+
+    .box-name {
+        font-size: 11px;
+    }
+
+    .question-card {
+        padding: 22px 10px;
+    }
+}
